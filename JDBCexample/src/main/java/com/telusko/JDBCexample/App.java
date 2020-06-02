@@ -16,14 +16,17 @@ public class App
     	Statement stmt=null;
       try
       {
-    	  Driver driver=new Driver() ;
-    	  DriverManager.registerDriver(driver);
-    	  String dbrul="jdbc:mysql://localhost:3306?jdbc:usename=root1:password=root1";
-    	  con=DriverManager.getConnection(dbrul);
-    	  String query="insert into firstjdbc(id,name) values(10,Abhi)";
+			/*
+			 * Driver driver=new Driver() ; DriverManager.registerDriver(driver);
+			 */
+    	  String dbrul="jdbc:mysql://localhost:3306/jdbc?";
+    	  String uname="root1";
+    	  String password="root1";
+    	  con=DriverManager.getConnection(dbrul, uname, password);
+    	  String query="insert into firstjdbc(id,name) values('20','Abhi')";
     	  stmt=con.createStatement();
     	  int res=stmt.executeUpdate(query);
-    	  while(res!=0)
+    	  if(res!=0)
     	  {
     		  System.out.println("inserted");
     	  }
