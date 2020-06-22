@@ -1,19 +1,20 @@
-package com.First.Itorizon;
+package com.example.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
-public class Control
+public class HelloController 
 {
 	@RequestMapping("/abhi")
-public String abhi()
-{
-	return "Hi";
-}
-	@RequestMapping("/akki")
-	public String hi()
+	public String hello1()
 	{
-		return "hello";
+		return "hi";
+	}
+	@RequestMapping("/akki")
+	public String hello2()
+	{
+		return "helo";
 	}
 }
